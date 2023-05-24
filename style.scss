@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #121212;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #121212;
+}
+
+.fadein{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.site-title{
+   line-height: 1px;
+}
+
+.site-title a{
+   display: block;
+
+}
+
+.sec-title{
+    font-size: 2.25rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+// header
+#header{
+    width: 100%;
+    display: flex;
+    z-index: 20;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+}
+
+.toggle_btn{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 25px;
+    right: 45px;
+    cursor: pointer;
+    z-index: 20;
+    transition: all .5s;
+}
+
+#header .toggle_btn span{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #121212;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+#header .toggle_btn.open span{
+    background-color:white;
+}
+
+
+#header .toggle_btn span:nth-of-type(1){
+    top: 4px;
+}
+
+#header .toggle_btn span:nth-of-type(2){
+    top: 14px;
+}
+
+#header .toggle_btn span:nth-of-type(3){
+    bottom: 4px;
+}
+
+
+#header .toggle_btn.open span:nth-of-type(1){
+    transform:translateY(10px) rotate(315deg);
+}
+
+#header .toggle_btn.open span:nth-of-type(2){
+    display: none;
+}
+
+#header .toggle_btn.open span:nth-of-type(3){
+    transform:translateY(-10px) rotate(-315deg);
+}
+
+
+#navi{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    color:white;
+    background-color: #121212;
+    padding: 60px 25px;
+    opacity: 0;
+    z-index: 20;
+    transition: all .5s;
+}
+
+#navi.open{
+    left:0;
+    opacity: 1;
+}
+
+#navi a{
+    color: white;
+}
+
+#navi ul{
+    padding: 0;
+    margin: 0;
+}
+
+#navi ul.nav-menu{
+    border-top: 1px solid white;
+    margin-bottom: 60px;
+}
+
+#navi ul.nav-menu li{
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+}
+
+#navi ul.nav-sns li{
+    padding: 5px 0;
+}
+
+#mask{
+    display: none;
+    transition: all .5s;
+}
+
+#mask.open{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+// main
+#main{
+    padding-top: 80px;
+}
+
+#bg-video{
+    width: 100%;
+    
+}
+// pickup
+#pickup{
+    width: 100%;
+    padding: 100px 0 50px 0;
+}
+
+.swiper-wrapper{
+    font-size: 0;
+}
+
+.swiper-slide{
+    padding: 0 30px;
+   
+}
+
+// feature
+#feature{
+    max-width: 1240px;
+    padding: 100px 16px 50px 16px;
+    margin: -50px auto 10px auto;
+}
+
+
+#feature .grid{
+    display: grid;
+    gap: 26px;
+    grid-template-columns:repeat(auto-fit,minmax(300px ,1fr)) ;
+}
+
+#feature .item{
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px 4px #ccc;
+}
+
+#feature .item-content{
+    padding: 30px;
+}
+
+#feature img{
+    vertical-align: top;
+}
+
+#feature .grid .item-cat {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+  #feature .grid .item-text {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  #feature .grid .item-date {
+    font-size: 0.75rem;
+    text-align: right;
+  }
+
+//   contact
+
+#contact{
+    background-color: #000;
+    color: white;
+    padding: 50px 0;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1240px;
+}
+
+.content-info p {
+    margin-bottom: 30px;
+}
+
+.content-info{
+    width: 45%;
+}
+
+.content-form{
+    width: 45%;
+}
+
+.content-form input,
+.content-form textarea{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.content-form .btn input{
+    background-color: #121212;
+    border: 1px solid white;
+    color: white;
+    width: 200px;
+    padding: 12px 0;
+    margin: 0;
+}
+
+.content-form .btn input:hover{
+    color: #202020;
+    background-color: white;
+}
+
+#footer {
+    color: #fff;
+    background-color: #121212;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+@media (max-width: 600px) {
+    .sec-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .swiper-slide{
+        padding: 0;
+    }
+  
+    #header {
+      padding: 20px 16px;
+    }
+    .toggle_btn {
+      right: 20px;
+    }
+  
+   
+    #bg-video {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+  
+
+    #pickup {
+      padding: 80px 0;
+    }
+    #pickup .slick-area li {
+      padding: 0 20px;
+    }
+  
+  
+    #feature {
+      padding: 80px 16px;
+    }
+    #feature .grid .item-content {
+      padding: 16px;
+    }
+  
+   
+    #contact {
+      padding: 80px 0;
+    }
+    #contact .content {
+      flex-direction: column;
+    }
+    #contact .content-info,
+    #contact .content-form {
+      width: 100%;
+    }
+    #contact .content-form .btn input {
+      width: 100%;
+    }
+  }
+  
